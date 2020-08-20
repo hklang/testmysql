@@ -2,14 +2,15 @@ package com.lang.testmysql;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "boottest") //声明实体对应得表，如果没有则创建(前提是application.properties文件中有相应的配置)
+@Table(name = "t_boottest") //声明实体对应得表，如果没有则创建(前提是application.properties文件中有相应的配置)
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String password;

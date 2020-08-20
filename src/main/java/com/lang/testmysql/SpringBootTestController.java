@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-
 @Controller
 public class SpringBootTestController {
 
@@ -26,7 +25,7 @@ public class SpringBootTestController {
     public String selectAll(Model model) {
          List<User> selectAll = userMapper.findAll();
          model.addAttribute("user", selectAll);
-        return "test1";
+        return "test2";
     }
     
 }
